@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Sherwin-Williams Color Calculator</title>
+		<link rel="stylesheet" href="font/font.css">
+		<link rel="stylesheet" href="style.css">
+	</head>
+	<body>
+		<main>
+			<header>
+				<h1>Sherwin-Willaims Color Calculator</h1>
+				<p>This calculator can subtract two colors to determine the differences.</p>	
+			</header>
+		
+			<table class="color">
+				<tr>
+					<th class="colorant">Colorant</th>
+					<th class="oz">OZ</th>
+					<th class="f32">32</th>
+					<th class="f64">64</th>
+					<th class="f128">128</th>
+				</tr>
+				<tr>
+					<td>
+						<input type="text" class="cid" id="c1-id" max-length="2" value="B1"  pattern="[aA][0-9]{2}" maxlength="2">
+						<input type="text" class="cfn" id="c1-fn" value="Black" readonly tabindex="-1">
+					</td>
+					<td>
+						<input type="text" class="coz" id="c1-oz" pattern="\d*" maxlength="2">
+					</td>
+					<td>
+						<input type="text" class="c32" id="c1-32" pattern="\d*" maxlength="2">
+					</td>
+					<td>
+						<input type="text" class="c64" id="c1-64" pattern="\d*" maxlength="2">
+					</td>
+					<td>
+						<input type="text" class="c128" id="c1-128" pattern="\d*" maxlength="3">
+					</td>
+				</tr>
+			</table>
+			<aside id="lookup">
+				<div class="content">
+					<header>Colorants Available</header>
+					<table class="colorants" id="colorant-lookup">
+						<tr>
+							<th>ID</th>
+							<th>Colorant Name</th>
+						</tr>
+						
+					</table>
+				</div>
+			</aside>
+		</main>
+		<script src="script.js"></script>
+	</body>
+</html>
