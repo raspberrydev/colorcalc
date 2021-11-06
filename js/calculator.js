@@ -1,3 +1,5 @@
+// https://stackoverflow.com/questions/69861899/subtract-two-quantities-and-split-into-fractional-values
+
 let colorants = {
 	"B1": "Black",
 	"L1": "Blue",
