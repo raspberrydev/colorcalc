@@ -25,15 +25,15 @@ const config = {
 };
 
 class Calculator {
-	focusableElements = [];
-	resultsDisplayOpen = false;
-	colorantLookupOpen = false;
-	colorantLookupSelected = 0;
-	colorantLookupElement = false;
-	originalColor = false;
-	newColor = false;
-
 	constructor(setup) {
+		this.focusableElements = [];
+		this.fresultsDisplayOpen = false;
+		this.fcolorantLookupOpen = false;
+		this.fcolorantLookupSelected = 0;
+		this.fcolorantLookupElement = false;
+		this.foriginalColor = false;
+		this.fnewColor = false;
+		
 		this.generateFocusableElements();
 
 		config.focus.retainer.addEventListener("focus", () => {
