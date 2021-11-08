@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font: 13pt "Inter", sans-serif;
+}
+
+.container {
+	width: 100%;
+	max-width: 400px;
+	margin: 0 auto;
+	padding-top: 25px;
+}
+
+.container.nopad {
+	padding-top: 0;
+}
+
+.container.item {
+	padding-top: 15px;
+}
+
+.centered {
+	text-align: center;
+}
+
+.color, .results {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 3fr repeat(4, 1fr);
+	grid-gap: 5px;
+	font: 16px monospace;
+	font-weight: bold;
+}
+
+.color .header, .color .row {
+	display: contents;
+}
+
+.results .header, .results .row {
+	display: contents;
+}
+
+.header .colorant {
+	position: relative;
+	overflow: hidden;
+}
+
+.header .colorant:after,
+.header .colorant::after {
+	content: "----------------------------";
+	display: inline-block;
+	height: auto;
+	z-index: 1;
+	position: absolute;
+}
+
+input {
+	display: inline-block;
+	background: #f1f1f1;
+	font: 16px monospace;
+	overflow: hidden;
+	text-align: left;
+	padding: 0 5px;
+	width: 100%;
+	height: 35px;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	border-radius: 2px;
+}
+
+.row .colorant {
+	display: inline-flex;
+}
+
+.cid {
+	width: 40px;
+	text-align: center;
+}
+
+.cfn {
+	width: calc(100% - 45px);
+	margin-left: 5px
+}
+
+.error {
+	border: 2px solid red
+}
+
+::-moz-selection {
+	color: #fff;
+	background: #a3a3a3;
+}
+
+::selection {
+	color: #fff;
+	background: #a3a3a3;
+}
+
+h3 {
+	margin: 0;
+	text-align: left;
+	margin-top: 35px
+}
+
+.colorants {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 1fr 90%;
+	grid-gap: 5px 0;
+	font: 16px monospace;
+	padding-top: 15px;
+}
+
+.colorants .header {
+	font-weight: bold;
+}
+
+.colorants .header > div {
+	padding: 5px 5px
+}
+
+.colorants .header, .colorants .row {
+	display: contents;
+}
+
+.colorants .row > div {
+	padding: 5px 5px
+}
+
+.colorants .row.selected > div {
+	background-color: #e6e6e6;
+}
+
+.colorants .colorant {
+	position: relative;
+	overflow: hidden;
+}
+
+aside {
+	display: none;  /*Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	padding-top: 100px; /* Location of the box */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto; /* Enable scroll if needed */
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+aside > .content {
+	background-color: #fefefe;
+	margin: auto;
+	padding: 20px;
+	border: 1px solid #888;
+	width: 100%;
+	max-width: 400px;
+	border-radius: 2px;
+}
+
+.negative {
+	color: red;
+	font-weight: bold;
+}
+.missing-paragraph {
+	color: salmon;
+}
+
