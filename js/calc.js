@@ -779,7 +779,7 @@ function Calculator() {
 				this.colorantLookupElement = event.target;
 			} else if(event.key == "F3") event.preventDefault(); // Prevent other F3 action
 
-			if(event.key == "F12") {
+			if(event.key == "F12" || event.key == "F22") {
 				event.preventDefault();
 				this.calculate();
 			}
